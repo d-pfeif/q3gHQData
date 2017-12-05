@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -8,6 +9,7 @@ const query = require('./db/query.js')
 app.set('view engine', 'hbs')
 // override with POST having ?_method=DELETE
 // app.use(methodOverride('_method'))
+app.use(cors())
 
 app.listen(port, (req,res)=>{
   console.log('RASENGAN!');
