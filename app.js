@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors')
+var bodyParser = require('body-parser')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -10,6 +11,8 @@ app.set('view engine', 'hbs')
 // override with POST having ?_method=DELETE
 // app.use(methodOverride('_method'))
 app.use(cors())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.listen(port, (req,res)=>{
   console.log('RASENGAN!');
