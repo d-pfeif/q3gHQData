@@ -27,13 +27,13 @@ function oneDaily(id) {
 
 function createUser(body) {
   return db('users').insert({
-  name: body.name,
-  email: body.email,
-  cohort: body.cohort,
-  github_handle: body.github_handle,
-  linkedin_handle: body.linkedin_handle,
-  password: body.password,
-  role: body.role
+  name: req.body.name,
+  email: req.body.email,
+  cohort: req.body.cohort,
+  github_handle: req.body.github_handle,
+  linkedin_handle: req.body.linkedin_handle,
+  password: req.body.password,
+  role: req.body.role
   })
 }
 
