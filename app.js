@@ -72,3 +72,11 @@ app.get('/api/daily/:id', (req,res)=>{
     res.json(data)
   })
 })
+
+app.post('/api/users/new', (req, res) => 
+  query.createUser(req.body)
+  .then((newUser)=>{
+    console.log(newUser);
+    res.json(newUser)
+  })
+}

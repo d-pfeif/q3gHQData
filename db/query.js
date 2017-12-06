@@ -25,11 +25,24 @@ function oneDaily(id) {
   return db('daily_plan').select().where('id', id)
 }
 
+function createUser(req.body) {
+  return db('users').insert({
+  name: req.body.name,
+  email: req.body.email,
+  cohort: req.body.cohort,
+  github_handle: req.body.github_handle,
+  linkedin_handle: req.body.linkedin_handle,
+  password: req.body.password,
+  role: req.body.role
+  })
+}
+
 module.exports = {
   getUsers,
   getOneUser,
   getCohorts,
   getOneCohort,
   daily,
-  oneDaily
+  oneDaily,
+  createUser
 }
