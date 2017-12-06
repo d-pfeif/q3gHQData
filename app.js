@@ -73,10 +73,10 @@ app.get('/api/daily/:id', (req,res)=>{
   })
 })
 
-app.post('/api/users/new', (req, res) => 
+app.post('/api/users/new', (req,res)=>{
   query.createUser(req.body)
   .then((newUser)=>{
     console.log(newUser);
     res.json(newUser)
   })
-}
+})
