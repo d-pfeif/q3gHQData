@@ -10,6 +10,7 @@ exports.up = function(knex, Promise) {
       table.string('linkedin_handle')
       table.string('password')
       table.string('role')
+      table.boolean('signedIn')
     })
   ])
 };

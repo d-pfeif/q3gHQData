@@ -59,6 +59,15 @@ app.get('/api/cohorts/:id', (req,res)=>{
   })
 })
 
+app.get('/api/cohorts/users/:id', (req,res)=>{
+  const id = req.params.id
+  query.getUsersInCohort(id)
+  .then((data)=>{
+    console.log(data);
+    res.json(data)
+  })
+})
+
 app.get('/api/daily', (req,res)=>{
   query.daily()
   .then((data)=>{

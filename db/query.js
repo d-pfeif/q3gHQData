@@ -17,6 +17,10 @@ function getOneCohort(id) {
   return db('cohorts').select().where('id', id)
 }
 
+function getUsersInCohort(cohortId) {
+  return db('users').select().where('cohort', cohortId)
+}
+
 function daily() {
   return db('daily_plan').select()
 }
@@ -33,7 +37,8 @@ function createUser(body) {
   github_handle: body.github_handle,
   linkedin_handle: body.linkedin_handle,
   password: body.password,
-  role: body.role
+  role: body.role,
+  signedIn: false
   })
 }
 
@@ -44,5 +49,6 @@ module.exports = {
   getOneCohort,
   daily,
   oneDaily,
-  createUser
+  createUser,
+  getUsersInCohort
 }
