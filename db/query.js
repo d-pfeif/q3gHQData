@@ -54,6 +54,10 @@ function getUsersMastery(id) {
   return db('mastery_tracking').select().where('user_id', id).join('users', 'user_id', 'users.id')
 }
 
+function submitMastery(body) {
+  return db('mastery_tracking').insert(body)
+}
+
 module.exports = {
   getUsers,
   getOneUser,
@@ -65,5 +69,6 @@ module.exports = {
   getUsersInCohort,
   updateUser,
   getAllMastery,
-  getUsersMastery
+  getUsersMastery,
+  submitMastery
 }
