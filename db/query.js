@@ -47,7 +47,8 @@ function createUser(body) {
 }
 
 function getAllMastery() {
-  return db('mastery_tracking').select().join('users', 'user_id', 'users.id')
+  return db('mastery_tracking').select()
+  .join('users', 'user_id', 'users.id')
 }
 
 function getUsersMastery(id) {

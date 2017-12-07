@@ -12,15 +12,6 @@ router.get('/', (req, res) => {
   })
 })
 
-router.post('/submissions', (req, res) => {
-  const body = req.body
-
-  query.submitMastery(body)
-  .then((data) => {
-    res.json(data)
-  })
-})
-
 router.get('/:id', (req, res) => {
   const id = req.params.id
 
@@ -29,6 +20,15 @@ router.get('/:id', (req, res) => {
     res.json(data)
   })
 
+})
+
+router.post('/submissions', (req, res) => {
+  const body = req.body
+
+  query.submitMastery(body)
+  .then((data) => {
+    res.json(data)
+  })
 })
 
 module.exports = router;
