@@ -46,6 +46,14 @@ function createUser(body) {
   })
 }
 
+function getAllMastery() {
+  return db('mastery_tracking').select().join('users', 'user_id', 'users.id')
+}
+
+function getUsersMastery(id) {
+  return db('mastery_tracking').select().where('user_id', id).join('users', 'user_id', 'users.id')
+}
+
 module.exports = {
   getUsers,
   getOneUser,
@@ -55,5 +63,7 @@ module.exports = {
   oneDaily,
   createUser,
   getUsersInCohort,
-  updateUser
+  updateUser,
+  getAllMastery,
+  getUsersMastery
 }

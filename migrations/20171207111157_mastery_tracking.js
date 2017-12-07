@@ -7,7 +7,7 @@ exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTable('mastery_tracking', (table)=>{
       table.increments()
-      table.text('name')
+      table.integer('user_id').references('users.id').onDelete('CASCADE')
       table.text('domain')
       table.text('standard')
       table.text('demonstration')

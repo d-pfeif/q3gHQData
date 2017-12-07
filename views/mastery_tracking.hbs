@@ -5,7 +5,17 @@
     <title>gHQ API</title>
   </head>
   <body>
-    <h1>HI!</h1>
-    {{test}}
+    <h1>Mastery Submissions</h1>
+    {{#each data}}
+      gStudent: {{name}}
+      <br />
+      Domain: {{domain}}
+      <br />
+      Standard: {{standard}}
+      <br />
+      Demonstration of mastery: {{demonstration}}
+      <br />
+      <br />
+    {{/each}}
   </body>
 </html>
