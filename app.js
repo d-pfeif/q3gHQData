@@ -7,7 +7,6 @@ const app = express()
 const port = process.env.PORT || 3000
 
 const query = require('./db/query.js')
-const masteryTracking = require('./routes/mastery_tracking.js')
 
 app.set('view engine', 'hbs')
 // override with POST having ?_method=DELETE
@@ -15,8 +14,6 @@ app.use(methodOverride('_method'))
 app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-
-app.use('/mastery_tracking', masteryTracking);
 
 app.listen(port, (req,res)=>{
   console.log('RASENGAN!');
@@ -72,9 +69,10 @@ app.get('/api/cohorts/users/:id', (req,res)=>{
   })
 })
 
-app.put('/api/hq/update', (req,res)=>{
+app.put('/api/hq/:id', (req,res)=>{
+  const id = req.params.id
   const body = req.body
-  query.updateUser(body)
+  query.updateUser(id, body)
   .then(data=>{
     console.log(data)
     res.json(data)
