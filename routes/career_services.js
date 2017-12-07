@@ -7,7 +7,6 @@ const query = require('../db/query.js')
 router.get('/', (req, res) => {
   query.getAllCareerServices()
   .then((data) => {
-    console.log(data)
     res.render('career_services', {data})
   })
 })
