@@ -8,7 +8,17 @@ exports.seed = function(knex, Promise) {
         {
           date: '12/06/2017',
           cohort: 1,
-          plan: '## Daily Plan\n\n### Help Queue\n\n- [Queue](https://docs.google.com/spreadsheets/d/1pMV_B-in7mcGUIUjnXMo7Y2Icww2T70Ln7m2QM1l6TY/edit#gid=0)\n\n<a href="https://docs.google.com/spreadsheets/d/1pMV_B-in7mcGUIUjnXMo7Y2Icww2T70Ln7m2QM1l6TY/edit#gid=0" target="_blank">Queue</a>\n\n### Schedule\n\n#### 9:00 am 👫 Stand up\n\n#### 12:00 pm 🍩 Lunch\n\n#### 4:00 pm Meet with your Product Owner\n\n#### 4:20 pm ✅ Survey time\n\n#### 4:30 pm 👫 Stand down\n\n things to work on at the [standards tracker](https://galvanize-standards.herokuapp.com/)'
+          plan: '## Daily Plan\n\n### Help Queue\n\n- [Queue](https://docs.google.com/spreadsheets/d/1pMV_B-in7mcGUIUjnXMo7Y2Icww2T70Ln7m2QM1l6TY/edit#gid=0)\n\n### Schedule\n\n#### 9:00 am 👫 Stand up\n\n#### 12:00 pm 🍩 Lunch\n\n#### 4:00 pm Meet with your Product Owner\n\n#### 4:20 pm ✅ Survey time\n\n#### 4:30 pm 👫 Stand down\n\n things to work on at the [standards tracker](https://galvanize-standards.herokuapp.com/)'
+        },
+        {
+          date: '12/07/2017',
+          cohort: 1,
+          plan: '## Daily Plan\n\n### Help Queue\n\n- [Queue](https://docs.google.com/spreadsheets/d/1pMV_B-in7mcGUIUjnXMo7Y2Icww2T70Ln7m2QM1l6TY/edit#gid=0)\n\n### Schedule\n\n#### 9:00 am 👫 Stand up\n\n#### 12:00 pm 🍩 Lunch\n\n#### 4:00 pm Meet with your Product Owner\n\n#### 4:20 pm ✅ Survey time\n\n#### 4:30 pm 👫 Stand down\n\n things to work on at the [standards tracker](https://galvanize-standards.herokuapp.com/)'
+        },
+        {
+          date: '12/08/2017',
+          cohort: 1,
+          plan: '## Daily Plan\n\n### Help Queue\n\n- [Queue](https://docs.google.com/spreadsheets/d/1pMV_B-in7mcGUIUjnXMo7Y2Icww2T70Ln7m2QM1l6TY/edit#gid=0)\n\n### Schedule\n\n#### 9:00 am 👫 Stand up\n\n#### 10:00 am 🔥 Presentations!!\n\n#### 12:00 pm 🍩 Lunch\n\n#### 1:00 pm 🍻 Get TURNT-UP\n\n#### 1:30 pm 🎓 Mastery Tracking\n\n#### 4:20 pm ✅ Survey time\n\n#### 4:30 pm 👫 Stand down\n\n things to work on at the [standards tracker](https://galvanize-standards.herokuapp.com/)'
         },
         {
           date: '12/05/2017',
