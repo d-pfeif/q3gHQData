@@ -29,6 +29,10 @@ function oneDaily(id) {
   return db('daily_plan').select().where('id', id)
 }
 
+function updateUser(id, body) {
+  return db('users').select().where('id', id).update(body).returning('id', 'name', 'email', 'cohort', 'github_handle', 'linkedin_handle','password','role')
+}
+
 function createUser(body) {
   return db('users').insert({
   name: body.name,
@@ -50,5 +54,6 @@ module.exports = {
   daily,
   oneDaily,
   createUser,
-  getUsersInCohort
+  getUsersInCohort,
+  updateUser
 }

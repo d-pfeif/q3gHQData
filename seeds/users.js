@@ -12,8 +12,7 @@ exports.seed = function(knex, Promise) {
           github_handle: 'd-pfeif',
           linkedin_handle: "d-pfeif",
           password: 'qwer',
-          role: 'student',
-          signedIn: false
+          role: 'student'
         },
         {
           name: "Lizz Robbins",
@@ -22,8 +21,7 @@ exports.seed = function(knex, Promise) {
           github_handle: 'lizzrobbins',
           linkedin_handle: "lizzrobbins",
           password: 'asdf',
-          role: 'student',
-          signedIn: false
+          role: 'student'
         },
         {
           name: "Jake Robbins",
@@ -32,8 +30,7 @@ exports.seed = function(knex, Promise) {
           github_handle: 'iamJakeRobbins',
           linkedin_handle: "iamJakeRobbins",
           password: 'asdf',
-          role: 'student',
-          signedIn: false
+          role: 'student'
         },
         {
           name: "Geralle Estes",
@@ -42,8 +39,7 @@ exports.seed = function(knex, Promise) {
           github_handle: 'geralle',
           linkedin_handle: "geralle",
           password: 'asdf',
-          role: 'student',
-          signedIn: false
+          role: 'student'
         },
         {
           name: "Cole Carroll",
@@ -52,8 +48,7 @@ exports.seed = function(knex, Promise) {
           github_handle: 'colecarroll',
           linkedin_handle: "colecarroll",
           password: 'asdf',
-          role: 'student',
-          signedIn: false
+          role: 'student'
         },
         {
           name: "Clark Walker",
@@ -62,8 +57,7 @@ exports.seed = function(knex, Promise) {
           github_handle: 'ClarkWalker',
           linkedin_handle: "ClarkWalker",
           password: 'asdf',
-          role: 'student',
-          signedIn: false
+          role: 'student'
         },
         {
           name: "Calvin Kreusser",
@@ -72,8 +66,7 @@ exports.seed = function(knex, Promise) {
           github_handle: 'ckreusser',
           linkedin_handle: "ckreusser",
           password: 'asdf',
-          role: 'student',
-          signedIn: false
+          role: 'student'
         },
         {
           name: "Brooks Patton",
@@ -82,8 +75,7 @@ exports.seed = function(knex, Promise) {
           github_handle: 'BrooksPatton',
           linkedin_handle: "brookspatton",
           password: 'asdf',
-          role: 'instructor',
-          signedIn: false
+          role: 'instructor'
         },
         {
           name: "Berto",
@@ -92,8 +84,7 @@ exports.seed = function(knex, Promise) {
           github_handle: 'berto',
           linkedin_handle: "berto",
           password: 'zxcv',
-          role: 'instructor',
-          signedIn: false
+          role: 'instructor'
         }
       ]);
     });
