@@ -17,8 +17,8 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use('/mastery_tracking', masteryTracking)
-app.use('/career_services', careerServices)
+app.use('/api/mastery_tracking', masteryTracking)
+app.use('/api/career_services', careerServices)
 
 app.listen(port, (req,res)=>{
   console.log('RASENGAN!');
