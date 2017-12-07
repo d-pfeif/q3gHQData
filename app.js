@@ -72,8 +72,7 @@ app.get('/api/cohorts/users/:id', (req,res)=>{
   })
 })
 
-app.put('/api/hq/:id', (req,res)=>{
-  const id = req.params.id
+app.put('/api/hq/update', (req,res)=>{
   const body = req.body
   query.updateUser(body)
   .then(data=>{

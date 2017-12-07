@@ -30,7 +30,7 @@ function oneDaily(id) {
 }
 
 function updateUser(body) {
-  return db('users').select().where('id', body.id).update(body).returning()
+  return db('users').select().where('email', body.email).update(body).returning()
 }
 
 function createUser(body) {
