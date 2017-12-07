@@ -7,6 +7,7 @@ const app = express()
 const port = process.env.PORT || 3000
 
 const query = require('./db/query.js')
+const masteryTracking = require('./routes/mastery_tracking.js')
 
 app.set('view engine', 'hbs')
 // override with POST having ?_method=DELETE
@@ -14,6 +15,8 @@ app.use(methodOverride('_method'))
 app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+
+app.use('/mastery_tracking', masteryTracking);
 
 app.listen(port, (req,res)=>{
   console.log('RASENGAN!');
