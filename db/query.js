@@ -29,8 +29,8 @@ function oneDaily(id) {
   return db('daily_plan').select().where('id', id)
 }
 
-function updateUser(id, body) {
-  return db('users').select().where('id', id).update(body).returning('id', 'name', 'email', 'cohort', 'github_handle', 'linkedin_handle','password','role')
+function updateUser(body) {
+  return db('users').select().where('id', body.id).update(body).returning()
 }
 
 function createUser(body) {
