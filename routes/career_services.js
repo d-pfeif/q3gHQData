@@ -5,16 +5,17 @@ const db = require('../db/connection.js')
 const query = require('../db/query.js')
 
 router.get('/', (req, res) => {
-  query.getAllMastery()
-  .then((data)=>{
-    res.render('mastery_tracking', {data})
+  query.getAllCareerServices()
+  .then((data) => {
+    console.log(data)
+    res.render('career_services', {data})
   })
 })
 
 router.get('/:id', (req, res) => {
   const id = req.params.id
 
-  query.getUsersMastery(id)
+  query.getUsersCS(id)
   .then((data) => {
     res.json(data)
   })
@@ -23,7 +24,7 @@ router.get('/:id', (req, res) => {
 router.post('/submissions', (req, res) => {
   const body = req.body
 
-  query.submitMastery(body)
+  query.submitCareerServices(body)
   .then((data) => {
     res.json(data)
   })

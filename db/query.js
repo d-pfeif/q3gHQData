@@ -59,6 +59,19 @@ function submitMastery(body) {
   return db('mastery_tracking').insert(body)
 }
 
+function getAllCareerServices() {
+  return db('career_services').select()
+  .join('users', 'user_id', 'users.id')
+}
+
+function getUsersCS(id) {
+  return db('career_services').select().where('user_id', id).join('users', 'user_id', 'users.id')
+}
+
+function submitCareerServices(body) {
+  return db('career_services').insert(body)
+}
+
 module.exports = {
   getUsers,
   getOneUser,
@@ -71,5 +84,8 @@ module.exports = {
   updateUser,
   getAllMastery,
   getUsersMastery,
-  submitMastery
+  submitMastery,
+  getAllCareerServices,
+  getUsersCS,
+  submitCareerServices
 }
