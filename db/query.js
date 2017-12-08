@@ -41,8 +41,7 @@ function createUser(body) {
   github_handle: body.github_handle,
   linkedin_handle: body.linkedin_handle,
   password: body.password,
-  role: body.role,
-  signedIn: false
+  role: body.role
   })
 }
 
